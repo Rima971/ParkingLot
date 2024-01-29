@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/VehicleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SlotTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/VehicleTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2bc75ZToApuX1mP9wPzFOvKSoL1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ParkingLotTest.can_find_where_a_car_is_parked.executor": "Run",
+    "JUnit.ParkingLotTest.can_park_a_vehicle_in_an_empty_parking_slot.executor": "Run",
+    "JUnit.ParkingLotTest.can_unpark_a_slot_id.executor": "Run",
+    "JUnit.ParkingLotTest.can_unpark_a_vehicle.executor": "Run",
+    "JUnit.ParkingLotTest.cannot_park_a_vehicle_if_slots_unavailable.executor": "Run",
+    "JUnit.ParkingLotTest.cannot_park_the_same_car_twice.executor": "Run",
+    "JUnit.ParkingLotTest.correctly_finds_count_of_all_cars_with_a_given_color.executor": "Run",
+    "JUnit.ParkingLotTest.executor": "Run",
+    "JUnit.ParkingLotTest.successfully_create_a_parking_lot_with_initial_set_of_slots.executor": "Run",
+    "JUnit.ParkingLotTest.throws_error_on_passing_slot_count_less_than_or_equal_to_0.executor": "Run",
+    "JUnit.SlotTest.executor": "Run",
+    "JUnit.SlotTest.successfully_create_a_parking_lot_with_initial_set_of_slots.executor": "Run",
+    "JUnit.SlotTest.successfully_create_empty_slots.executor": "Run",
+    "JUnit.SlotTest.successfully_create_filled_slots.executor": "Run",
+    "JUnit.SlotTest.successfully_unoccupy_a_slot_with_a_vehicle.executor": "Run",
+    "JUnit.VehicleTest.can_create_a_vehicle_of_certain_type.executor": "Run",
+    "JUnit.VehicleTest.detects_correctly_if_two_vehicles_instances_represents_same_vehicle.executor": "Run",
+    "JUnit.VehicleTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/Users/madhurima.poddar_ftc/IdeaProjects/parkingLot/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.ParkingLotTest.correctly_finds_count_of_all_cars_with_a_given_color">
+    <configuration name="ParkingLotTest.can_find_where_a_car_is_parked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
+      <option name="METHOD_NAME" value="can_find_where_a_car_is_parked" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest.can_park_a_vehicle_in_an_empty_parking_slot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
+      <option name="METHOD_NAME" value="can_park_a_vehicle_in_an_empty_parking_slot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest.can_unpark_a_vehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
+      <option name="METHOD_NAME" value="can_unpark_a_vehicle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest.cannot_park_the_same_car_twice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
+      <option name="METHOD_NAME" value="cannot_park_the_same_car_twice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest.correctly_finds_count_of_all_cars_with_a_given_color" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
+      <option name="METHOD_NAME" value="correctly_finds_count_of_all_cars_with_a_given_color" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ParkingLotTest.correctly_finds_count_of_all_cars_with_a_given_color" />
+        <item itemvalue="JUnit.ParkingLotTest.can_find_where_a_car_is_parked" />
+        <item itemvalue="JUnit.ParkingLotTest.can_unpark_a_vehicle" />
+        <item itemvalue="JUnit.ParkingLotTest.cannot_park_the_same_car_twice" />
+        <item itemvalue="JUnit.ParkingLotTest.can_park_a_vehicle_in_an_empty_parking_slot" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="" />
+      <created>1706502332790</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706502332790</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ParkingLotTest.java</url>
+          <line>31</line>
+          <properties class="ParkingLotTest" method="cannot_park_a_vehicle_if_slots_unavailable">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/VehicleTest.java</url>
+          <line>17</line>
+          <properties class="VehicleTest" method="detects_correctly_if_two_vehicles_instances_represents_same_vehicle">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
