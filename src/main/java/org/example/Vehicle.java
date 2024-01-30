@@ -12,10 +12,25 @@ public class Vehicle {
         this.registrationNumber = registrationNumber;
     }
 
+    @Override
     public boolean equals(Object o){
       if (o==this) return true;
       if (o==null || o.getClass()!=this.getClass()) return false;
       Vehicle v = (Vehicle) o;
-      return Objects.equals(v.registrationNumber, this.registrationNumber);
+      return v.type == this.type && v.color == this.color && Objects.equals(v.registrationNumber, this.registrationNumber);
     };
+
+    public boolean HasRegistrationNo(String registrationNumber){
+        return Objects.equals(this.registrationNumber, registrationNumber);
+    }
+
+    public boolean HasRegistrationNo(Vehicle vehicle){
+        if (vehicle==this) return true;
+        if (vehicle==null) return false;
+        return Objects.equals(this.registrationNumber, vehicle.registrationNumber);
+    }
+
+    public boolean isOfColor(Color color){
+        return this.color == color;
+    }
 }

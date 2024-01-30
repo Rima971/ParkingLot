@@ -1,6 +1,7 @@
 package org.example;
 
 import java.security.InvalidParameterException;
+import java.util.Stack;
 
 public class ParkingLot {
     private Slot[] slots;
@@ -12,6 +13,7 @@ public class ParkingLot {
         }
     }
 
+    // remove this constructor
     public ParkingLot(Slot[] slots){
         isValid(slots);
         this.slots = slots;
@@ -20,23 +22,39 @@ public class ParkingLot {
     private void isValid(Slot[] slots) throws InvalidParameterException{
         for (Slot s1: slots){
             for (Slot s2: slots){
-                if (s1!=s2 && s1.id==s2.id) throw new InvalidParameterException("Dulicate slots present");
+                if (s1!=s2){
+                    if (s1.id==s2.id) throw new InvalidParameterException("Dulicate slots present");
+                    if (s1.checkRegistrationNumberMatch(s2)) throw new InvalidParameterException("Slots have duplicate vehicles");
+                }
+
             }
         }
     }
 
-    private Slot getEmptySlot() throws Exception {
+    private Slot getEmptySlot() {
         for (Slot slot: slots){
             if (!slot.isOccupied()) return slot;
         }
-        throw new Exception("No slots empty");
+        return null;
     }
 
-    public Slot findVehicle(Vehicle vehicle) {
+    public boolean hasEmptySlot(){
+        if (getEmptySlot() != null) return true;
+        return false;
+    }
+
+    public Slot findVehicleSlot(String registrationNumber) {
         for (Slot slot: slots){
-            if (slot.checkVehicleMatch(vehicle)) return slot;
+            if (slot.checkRegistrationNumberMatch(registrationNumber)) return slot;
         }
         return null;
+    }
+
+    private boolean isVehicleParked(Vehicle vehicle){
+        for (Slot slot: slots){
+            if (slot.checkRegistrationNumberMatch(vehicle)) return true;
+        }
+        return false;
     }
 
     public Slot findSlot(int id) {
@@ -47,24 +65,39 @@ public class ParkingLot {
     }
 
     public int park(Vehicle vehicle) throws Exception {
-        if (this.findVehicle(vehicle)!=null) throw new Exception("This vehicle is already parked");
+        if (this.isVehicleParked(vehicle)) throw new Exception("This vehicle is already parked");
         Slot slot = this.getEmptySlot();
+        if (slot==null) throw new Exception("No slots are available");
         slot.occupy(vehicle);
         return slot.id;
     }
 
-    public void unparkByVehicle(Vehicle vehicle) throws Exception {
-        Slot slot = findVehicle(vehicle);
-        slot.unoccupy();
+    public Integer[] park(Vehicle[] vehicles) throws Exception {
+        Stack<Integer> slotIDs = new Stack<>();
+        for (Vehicle vehicle: vehicles){
+            try {
+                int id = this.park(vehicle);
+                slotIDs.push(id);
+            } catch (Exception e){
+                return slotIDs.toArray(new Integer[0]);
+            }
+        }
+        return slotIDs.toArray(new Integer[0]);
     }
 
-    public void unparkBySlotID(int id) throws Exception {
-        Slot slot = findSlot(id);
+    public void unpark(int slotID, String registrationNumber) throws Exception {
+        Slot slot = findSlot(slotID);
+        if (slot==null) throw new Exception("This vehicle wasn't parked here");
+        if (!slot.checkRegistrationNumberMatch(registrationNumber)) throw new Exception("Unauthorized action: Incorrect slot ID or vehicle registration number");
         slot.unoccupy();
     }
 
     public int getCountOfVehiclesOfColor(Color color){
-        return 0;
+        int count = 0;
+        for (Slot slot: slots){
+            if (slot.checkVehicleColorMatch(color)) count++;
+        }
+        return count;
     }
 
 

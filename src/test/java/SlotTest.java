@@ -4,8 +4,7 @@ import org.example.Vehicle;
 import org.example.VehicleType;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 public class SlotTest {
     @Test
@@ -24,6 +23,7 @@ public class SlotTest {
     public void successfully_occupy_a_slot_with_a_vehicle() throws Exception {
         Slot slot = new Slot(1);
         slot.occupy(new Vehicle(VehicleType.MOTORCYCLE, Color.RED, "RJ111"));
+        assertTrue(slot.isOccupied());
     }
 
     @Test

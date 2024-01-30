@@ -7,6 +7,7 @@ public class Slot {
     public Slot(int id){
         this.id = id;
     }
+    // remove this constructor
     public Slot(Vehicle vehicle, int id){
         this.occupied = true;
         this.id = id;
@@ -29,8 +30,20 @@ public class Slot {
         this.occupied = false;
     }
 
-    public boolean checkVehicleMatch(Vehicle vehicle){
-        return vehicle.equals(this.vehicle);
+    public boolean checkRegistrationNumberMatch(String registrationNumber){
+        return this.vehicle.HasRegistrationNo(registrationNumber);
+    }
+    public boolean checkRegistrationNumberMatch(Vehicle vehicle){
+        return vehicle.HasRegistrationNo(this.vehicle);
+    }
+
+    public boolean checkRegistrationNumberMatch(Slot slot){
+        if (slot.vehicle == null || this.vehicle == null) return false;
+        return slot.vehicle.HasRegistrationNo(slot.vehicle);
+    }
+
+    public boolean checkVehicleColorMatch(Color color){
+        return vehicle.isOfColor(color);
     }
 
 }
