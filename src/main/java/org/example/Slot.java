@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.enums.Color;
 import org.example.exceptions.AlreadyOccupiedSlot;
 import org.example.exceptions.AlreadyUnoccupiedSlot;
 

@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.exceptions.AlreadyParkedVehicle;
+import org.example.exceptions.ParkingLotFull;
+
 import java.util.HashMap;
 
 public class Attendant {
@@ -15,15 +18,15 @@ public class Attendant {
         }
     }
 
-    public String park(Vehicle vehicle) throws Exception {
+    public String park(Vehicle vehicle) throws ParkingLotFull {
         for (int i=0; i<this.parkingLots.size(); i++){
             ParkingLot parkingLot = this.parkingLots.get(i);
-            if (parkingLot.isVehicleParked(vehicle)) throw new Exception("Vehicle already parked");
+            if (parkingLot.isVehicleParked(vehicle)) throw new AlreadyParkedVehicle();
             if (parkingLot.hasEmptySlot()){
                 return i + "-" + parkingLot.park(vehicle);
             }
         }
-        throw new Exception("No spots available in any parking lot");
+        throw new ParkingLotFull();
     }
 
     public void unpark(String token, String registrationNumber) throws Exception {

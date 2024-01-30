@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.enums.Color;
+import org.example.enums.VehicleType;
+
 import java.util.Objects;
 
 public class Vehicle {

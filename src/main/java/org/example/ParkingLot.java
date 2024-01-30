@@ -1,7 +1,7 @@
 package org.example;
 
+import org.example.enums.Color;
 import org.example.exceptions.AlreadyParkedVehicle;
-import org.example.exceptions.AlreadyUnoccupiedSlot;
 import org.example.exceptions.ParkingLotFull;
 import org.example.exceptions.UnauthorizedAction;
 

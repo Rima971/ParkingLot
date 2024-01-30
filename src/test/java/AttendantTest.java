@@ -1,4 +1,7 @@
 import org.example.*;
+import org.example.enums.Color;
+import org.example.enums.VehicleType;
+import org.example.exceptions.ParkingLotFull;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -45,7 +48,7 @@ public class AttendantTest {
         attendant.park(new Vehicle(VehicleType.CAR, Color.WHITE, "111"));
         attendant.park(new Vehicle(VehicleType.CAR, Color.WHITE, "112"));
 
-        assertThrows(Exception.class, ()->attendant.park(new Vehicle(VehicleType.CAR, Color.WHITE, "123")));
+        assertThrows(ParkingLotFull.class, ()->attendant.park(new Vehicle(VehicleType.CAR, Color.WHITE, "123")));
     }
 
     @Test

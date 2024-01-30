@@ -1,4 +1,6 @@
 import org.example.*;
+import org.example.enums.Color;
+import org.example.enums.VehicleType;
 import org.example.exceptions.AlreadyParkedVehicle;
 import org.example.exceptions.ParkingLotFull;
 import org.junit.Test;

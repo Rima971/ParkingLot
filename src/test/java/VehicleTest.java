@@ -1,6 +1,6 @@
-import org.example.Color;
+import org.example.enums.Color;
 import org.example.Vehicle;
-import org.example.VehicleType;
+import org.example.enums.VehicleType;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

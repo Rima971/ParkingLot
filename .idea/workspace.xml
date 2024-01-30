@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses">
+    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="fixed types">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VehicleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/VehicleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ParkingLotFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ParkingLotFull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AttendantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AttendantTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SlotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SlotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +105,32 @@
     "onboarding.tips.debug.path": "/Users/madhurima.poddar_ftc/IdeaProjects/parkingLot/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AttendantTest">
+  <component name="RunManager" selected="JUnit.AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull">
     <configuration name="AttendantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AttendantTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AttendantTest" />
+      <option name="METHOD_NAME" value="attendantCanParkInSecondLotWhenFirstLotIsFull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttendantTest.throwsExceptionWhenAllParkingLotsAreFilled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AttendantTest" />
+      <option name="METHOD_NAME" value="throwsExceptionWhenAllParkingLotsAreFilled" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,31 +154,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SlotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parkingLot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SlotTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehicleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parkingLot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VehicleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull" />
+        <item itemvalue="JUnit.AttendantTest.throwsExceptionWhenAllParkingLotsAreFilled" />
         <item itemvalue="JUnit.AttendantTest" />
         <item itemvalue="JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked" />
         <item itemvalue="JUnit.ParkingLotTest" />
-        <item itemvalue="JUnit.VehicleTest" />
-        <item itemvalue="JUnit.SlotTest" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706611927160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="removed unnecessary code and fixed types">
+      <option name="closed" value="true" />
+      <created>1706612009853</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706612009853</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed types">
+      <option name="closed" value="true" />
+      <created>1706612107082</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706612107082</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -250,25 +280,22 @@
     <MESSAGE value="Created new custom runtime exceptions" />
     <MESSAGE value="Removed unnecessary manager class (Owner)" />
     <MESSAGE value="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses" />
+    <MESSAGE value="removed unnecessary code and fixed types" />
+    <MESSAGE value="fixed types" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed types" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ParkingLotTest.java</url>
-          <line>134</line>
+          <line>136</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ParkingLotTest.java</url>
-          <line>36</line>
-          <properties class="ParkingLotTest" method="cannot_park_a_vehicle_if_slots_unavailable">
+          <line>38</line>
+          <properties class="ParkingLotTest" method="cannotParkAVehicleIfSlotsUnavailable">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
