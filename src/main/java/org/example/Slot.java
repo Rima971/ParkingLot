@@ -2,7 +2,7 @@ package org.example;
 
 public class Slot {
     private boolean occupied = false;
-    public final int id;
+    public final int id; // keep id in ParkingLot
     private Vehicle vehicle = null;
     public Slot(int id){
         this.id = id;

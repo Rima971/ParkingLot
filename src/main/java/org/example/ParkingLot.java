@@ -100,5 +100,4 @@ public class ParkingLot {
         return count;
     }
 
-
 }

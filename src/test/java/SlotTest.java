@@ -8,19 +8,19 @@ import static org.junit.Assert.*;
 
 public class SlotTest {
     @Test
-    public void successfully_create_empty_slots(){
+    public void successfullyCreateEmptySlots(){
         Slot slot = new Slot(1);
         assertEquals(false, slot.isOccupied());
     }
 
     @Test
-    public void successfully_create_filled_slots(){
+    public void successfullyCreateFilledSlots(){
         Slot slot = new Slot(new Vehicle(VehicleType.CAR, Color.RED, "RJ111"),1);
         assertEquals(true, slot.isOccupied());
     }
 
     @Test
-    public void successfully_occupy_a_slot_with_a_vehicle() throws Exception {
+    public void successfullyOccupyASlotWithAVehicle() throws Exception {
         Slot slot = new Slot(1);
         slot.occupy(new Vehicle(VehicleType.MOTORCYCLE, Color.RED, "RJ111"));
         assertTrue(slot.isOccupied());
