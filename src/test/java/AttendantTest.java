@@ -82,7 +82,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void ThrowsExceptionWhenUparkingUsingIncorrectCredentials() throws Exception {
+    public void ThrowsExceptionWhenUparkingUsingIncorrectCredentials() {
         ParkingLot firstLot = new ParkingLot(3);
         ParkingLot secondLot = new ParkingLot(4);
         ParkingLot[] parkingLots = {firstLot,secondLot};
@@ -124,7 +124,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void attendantCanParkInSecondLotWhenFirstLotIsFull() throws Exception {
+    public void attendantCanParkInSecondLotWhenFirstLotIsFull() {
         ParkingLot lot1 = new ParkingLot(1);
         ParkingLot lot2 = new ParkingLot(1);
         ParkingLot[] initialParkingLotCollection = {lot1, lot2};
@@ -143,7 +143,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void twoAttendantsCanParkInSameParkingLot() throws Exception {
+    public void twoAttendantsCanParkInSameParkingLot() {
         ParkingLot lot = new ParkingLot(2);
         ParkingLot[] initialParkingLotCollection = {lot};
         Attendant firstAttendant = new Attendant(initialParkingLotCollection);
@@ -160,7 +160,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void twoAttendantsCanUnparkAnyVehicleFromSameParkingLotWithoutConflict() throws Exception {
+    public void twoAttendantsCanUnparkAnyVehicleFromSameParkingLotWithoutConflict() {
         ParkingLot lot = new ParkingLot(3);
         ParkingLot[] initialParkingLotCollection = {lot};
         Attendant firstAttendant = new Attendant(initialParkingLotCollection);

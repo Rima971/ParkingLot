@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.exceptions.AlreadyParkedVehicle;
 import org.example.exceptions.ParkingLotFull;
+import org.example.exceptions.ReassigningParkingLot;
 
 import java.util.HashMap;
 
@@ -18,7 +19,7 @@ public class Attendant {
         }
     }
 
-    public String park(Vehicle vehicle) throws ParkingLotFull {
+    public String park(Vehicle vehicle) throws ParkingLotFull, AlreadyParkedVehicle {
         for (int i=0; i<this.parkingLots.size(); i++){
             ParkingLot parkingLot = this.parkingLots.get(i);
             if (parkingLot.isVehicleParked(vehicle)) throw new AlreadyParkedVehicle();
@@ -34,10 +35,10 @@ public class Attendant {
         this.parkingLots.get(Integer.parseInt(split[0])).unpark(Integer.parseInt(split[1]), registrationNumber);
     }
 
-    public void assign(ParkingLot parkingLot) {
+    public void assign(ParkingLot parkingLot) throws ReassigningParkingLot {
         this.parkingLots.forEach((id, storedLot)-> {
             if (storedLot == parkingLot) try {
-                throw new Exception("Trying to repeat assign a parking lot");
+                throw new ReassigningParkingLot();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

@@ -6,7 +6,7 @@ import org.example.exceptions.AlreadyUnoccupiedSlot;
 
 public class Slot {
     private boolean occupied = false;
-    public final int id; // keep id in ParkingLot
+    public final int id;
     private Vehicle vehicle = null;
     public Slot(int id){
         this.id = id;
@@ -16,13 +16,13 @@ public class Slot {
         return this.occupied;
     }
 
-    public void occupy(Vehicle vehicle) {
+    public void occupy(Vehicle vehicle) throws AlreadyOccupiedSlot {
         if (this.occupied || this.vehicle!=null) throw new AlreadyOccupiedSlot();
         this.vehicle = vehicle;
         this.occupied = true;
     }
 
-    public void unoccupy() {
+    public void unoccupy() throws AlreadyUnoccupiedSlot {
         if (!this.occupied || this.vehicle==null) throw new AlreadyUnoccupiedSlot();
         this.vehicle = null;
         this.occupied = false;
@@ -33,11 +33,6 @@ public class Slot {
     }
     public boolean checkRegistrationNumberMatch(Vehicle vehicle){
         return vehicle.HasRegistrationNo(this.vehicle);
-    }
-
-    public boolean checkRegistrationNumberMatch(Slot slot){
-        if (slot.vehicle == null || this.vehicle == null) return false;
-        return slot.vehicle.HasRegistrationNo(slot.vehicle);
     }
 
     public boolean checkVehicleColorMatch(Color color){
