@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="added Owner class which can assign parking lots to parking lot and tested the behavior">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/AlreadyOccupiedSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/AlreadyParkedVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/AlreadyUnoccupiedSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ParkingLotFull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/UnauthorizedAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Owner.java" beforeDir="false" />
+    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Removed unnecessary manager class (Owner)">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OwnerTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AttendantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SlotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SlotTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +96,7 @@
     "onboarding.tips.debug.path": "/Users/madhurima.poddar_ftc/IdeaProjects/parkingLot/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AttendantTest">
+  <component name="RunManager" selected="JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked">
     <configuration name="AttendantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
@@ -126,11 +115,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingLotTest.returns_slot_ids_of_only_the_cars_that_were_parked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
-      <option name="METHOD_NAME" value="returns_slot_ids_of_only_the_cars_that_were_parked" />
+      <option name="METHOD_NAME" value="ReturnsSlotIDsOfOnlyTheCarThatWereParked" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AttendantTest" />
+        <item itemvalue="JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked" />
         <item itemvalue="JUnit.ParkingLotTest" />
+        <item itemvalue="JUnit.AttendantTest" />
         <item itemvalue="JUnit.VehicleTest" />
         <item itemvalue="JUnit.SlotTest" />
-        <item itemvalue="JUnit.ParkingLotTest.returns_slot_ids_of_only_the_cars_that_were_parked" />
       </list>
     </recent_temporary>
   </component>
@@ -204,14 +193,58 @@
       <option name="project" value="LOCAL" />
       <updated>1706592907841</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Removed a constructor from Slot and wrote tests for methods that match vehicle's registration number and color">
+      <option name="closed" value="true" />
+      <created>1706611378997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706611378997</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed junit version">
+      <option name="closed" value="true" />
+      <created>1706611398401</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706611398401</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changed junit version">
+      <option name="closed" value="true" />
+      <created>1706611401771</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706611401771</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created new custom runtime exceptions">
+      <option name="closed" value="true" />
+      <created>1706611426260</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706611426260</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removed unnecessary manager class (Owner)">
+      <option name="closed" value="true" />
+      <created>1706611458431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706611458431</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created a working model of parking lot with required tests" />
     <MESSAGE value="added ParkingLots and test to successfully park a vehicle" />
     <MESSAGE value="added Owner class which can assign parking lots to parking lot and tested the behavior" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Owner class which can assign parking lots to parking lot and tested the behavior" />
+    <MESSAGE value="Removed a constructor from Slot and wrote tests for methods that match vehicle's registration number and color" />
+    <MESSAGE value="Changed junit version" />
+    <MESSAGE value="Created new custom runtime exceptions" />
+    <MESSAGE value="Removed unnecessary manager class (Owner)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary manager class (Owner)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,24 +267,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/VehicleTest.java</url>
-          <line>16</line>
-          <properties class="VehicleTest" method="detects_correctly_if_two_vehicles_instances_represents_same_vehicle">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/AttendantTest.java</url>
-          <line>142</line>
-          <properties class="AttendantTest" method="twoAttendantsCanParkInSameParkingLot">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

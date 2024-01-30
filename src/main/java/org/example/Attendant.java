@@ -2,10 +2,10 @@ package org.example;
 
 import java.util.HashMap;
 
-public class ParkingLots {
+public class Attendant {
     private HashMap<Integer, ParkingLot> parkingLots = new HashMap<>();
     private int counter = 0;
-    public ParkingLots(ParkingLot[] parkingLots){
+    public Attendant(ParkingLot[] parkingLots){
         createHashMap(parkingLots);
     }
 
@@ -16,13 +16,12 @@ public class ParkingLots {
     }
 
     public String park(Vehicle vehicle) throws Exception {
-        int i = 0;
-        while(i<this.parkingLots.size()){
+        for (int i=0; i<this.parkingLots.size(); i++){
             ParkingLot parkingLot = this.parkingLots.get(i);
+            if (parkingLot.isVehicleParked(vehicle)) throw new Exception("Vehicle already parked");
             if (parkingLot.hasEmptySlot()){
                 return i + "-" + parkingLot.park(vehicle);
             }
-            i++;
         }
         throw new Exception("No spots available in any parking lot");
     }

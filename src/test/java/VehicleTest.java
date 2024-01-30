@@ -3,8 +3,7 @@ import org.example.Vehicle;
 import org.example.VehicleType;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class VehicleTest {
     @Test
@@ -21,12 +20,12 @@ public class VehicleTest {
         Vehicle v3 = new Vehicle(VehicleType.MOTORCYCLE, Color.BLUE, "RJ123");
         Vehicle v4 = new Vehicle(VehicleType.MOTORCYCLE, Color.RED, "RJ122");
 
-        assertTrue(v1.equals(v2));
-        assertTrue(v2.equals(v1));
-        assertTrue(v1.equals(v1));
-        assertFalse(v1.equals(v3));
-        assertFalse(v1.equals(v4));
-        assertFalse(v1.equals(null));
+        assertEquals(v1, v2);
+        assertEquals(v2, v1);
+        assertEquals(v1, v1);
+        assertNotEquals(v1, v3);
+        assertNotEquals(v1, v4);
+        assertNotEquals(null, v1);
     }
     @Test
     public void detects_correctly_if_two_vehicles_instances_represents_same_registration_number(){
