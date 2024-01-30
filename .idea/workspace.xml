@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Worked on IDE warnings">
+    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Test to reverse strategy and get the farthest spot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AttendantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AttendantTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AttendantTest.ableToParkVehicleAtTheFarthestEmptySlotOnReversingStrategy.executor": "Run",
     "JUnit.AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull.executor": "Run",
     "JUnit.AttendantTest.attendantParksInSecondLotWhenFirstLotIsFull.executor": "Run",
     "JUnit.AttendantTest.executor": "Run",
@@ -53,6 +54,7 @@
     "JUnit.ParkingLotTest,cannot_park_a_vehicle_if_slots_unavailable and 1 more.executor": "Run",
     "JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked.executor": "Run",
     "JUnit.ParkingLotTest.able_to_park_in_multiple_slots.executor": "Run",
+    "JUnit.ParkingLotTest.canParkAVehicleInAnEmptyParkingSlot.executor": "Run",
     "JUnit.ParkingLotTest.can_find_where_a_car_is_parked.executor": "Run",
     "JUnit.ParkingLotTest.can_park_a_vehicle_in_an_empty_parking_slot.executor": "Run",
     "JUnit.ParkingLotTest.can_unpark_a_slot_id.executor": "Run",
@@ -96,7 +98,7 @@
     "onboarding.tips.debug.path": "/Users/madhurima.poddar_ftc/IdeaProjects/parkingLot/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ParkingLotTest.canParkAVehicleInAnEmptyParkingSlot">
+  <component name="RunManager" selected="JUnit.AttendantTest">
     <configuration name="AttendantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,11 +108,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AttendantTest.ableToParkVehicleAtTheFarthestEmptySlotOnReversingStrategy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AttendantTest" />
-      <option name="METHOD_NAME" value="attendantCanParkInSecondLotWhenFirstLotIsFull" />
+      <option name="METHOD_NAME" value="ableToParkVehicleAtTheFarthestEmptySlotOnReversingStrategy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AttendantTest" />
+        <item itemvalue="JUnit.AttendantTest.ableToParkVehicleAtTheFarthestEmptySlotOnReversingStrategy" />
         <item itemvalue="JUnit.ParkingLotTest.canParkAVehicleInAnEmptyParkingSlot" />
         <item itemvalue="JUnit.ParkingLotTest.parksAtTheFarthestSlotOnReversingStrategy" />
-        <item itemvalue="JUnit.AttendantTest" />
         <item itemvalue="JUnit.ParkingLotTest" />
-        <item itemvalue="JUnit.AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706613542052</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Test to reverse strategy and get the farthest spot">
+      <option name="closed" value="true" />
+      <created>1706619209242</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1706619209242</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -308,7 +318,8 @@
     <MESSAGE value="reorganized the codebase better" />
     <MESSAGE value="Refactored Attendent to use custom exceptions" />
     <MESSAGE value="Worked on IDE warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on IDE warnings" />
+    <MESSAGE value="Test to reverse strategy and get the farthest spot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test to reverse strategy and get the farthest spot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

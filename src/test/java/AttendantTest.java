@@ -36,6 +36,9 @@ public class AttendantTest {
         assertTrue(firstLot.isVehicleParked(firstCar));
         assertTrue(firstLot.isVehicleParked(secondCar));
         assertTrue(firstLot.isVehicleParked(thirdCar));
+        assertTrue(firstLot.findSlot(0).checkRegistrationNumberMatch(firstCar));
+        assertTrue(firstLot.findSlot(1).checkRegistrationNumberMatch(secondCar));
+        assertTrue(firstLot.findSlot(2).checkRegistrationNumberMatch(thirdCar));
     }
 
     @Test
@@ -184,5 +187,30 @@ public class AttendantTest {
         secondAttendant.unpark(thirdToken, "124");
         assertFalse(lot.isVehicleParked(thirdCar));
         assertThrows(Exception.class, ()-> firstAttendant.unpark(thirdToken, "124"));
+    }
+
+    @Test
+    public void ableToParkVehicleAtTheFarthestEmptySlotOnReversingStrategy() {
+        ParkingLot firstLot = new ParkingLot(3);
+        ParkingLot secondLot = new ParkingLot(3);
+        ParkingLot[] parkingLots = {firstLot,secondLot};
+        Attendant attendant = new Attendant(parkingLots);
+        Vehicle firstCar = new Vehicle(VehicleType.CAR, Color.WHITE, "123");
+        Vehicle secondCar = new Vehicle(VehicleType.CAR, Color.WHITE, "124");
+        Vehicle thirdCar = new Vehicle(VehicleType.CAR, Color.WHITE, "125");
+
+        attendant.park(firstCar, true);
+        attendant.park(secondCar, true);
+        attendant.park(thirdCar, true);
+
+        assertTrue(firstLot.hasEmptySlot());
+        assertFalse(secondLot.hasEmptySlot());
+        assertTrue(secondLot.isVehicleParked(firstCar));
+        assertTrue(secondLot.isVehicleParked(secondCar));
+        assertTrue(secondLot.isVehicleParked(thirdCar));
+        assertTrue(secondLot.findSlot(2).checkRegistrationNumberMatch(firstCar));
+        assertTrue(secondLot.findSlot(1).checkRegistrationNumberMatch(secondCar));
+        assertTrue(secondLot.findSlot(0).checkRegistrationNumberMatch(thirdCar));
+
     }
 }

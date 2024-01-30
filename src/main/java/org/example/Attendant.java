@@ -30,6 +30,28 @@ public class Attendant {
         throw new ParkingLotFull();
     }
 
+    public String park(Vehicle vehicle, boolean reverseStrategy) throws ParkingLotFull, AlreadyParkedVehicle {
+        if (reverseStrategy){
+            for (int i=this.parkingLots.size()-1; i>=0; i--){
+                ParkingLot parkingLot = this.parkingLots.get(i);
+                if (parkingLot.isVehicleParked(vehicle)) throw new AlreadyParkedVehicle();
+                if (parkingLot.hasEmptySlot()){
+                    return i + "-" + parkingLot.park(vehicle, reverseStrategy);
+                }
+            }
+        } else{
+            for (int i=0; i<this.parkingLots.size(); i++){
+                ParkingLot parkingLot = this.parkingLots.get(i);
+                if (parkingLot.isVehicleParked(vehicle)) throw new AlreadyParkedVehicle();
+                if (parkingLot.hasEmptySlot()){
+                    return i + "-" + parkingLot.park(vehicle, reverseStrategy);
+                }
+            }
+        }
+
+        throw new ParkingLotFull();
+    }
+
     public void unpark(String token, String registrationNumber) {
         String[] split = token.split("-");
         this.parkingLots.get(Integer.parseInt(split[0])).unpark(Integer.parseInt(split[1]), registrationNumber);
