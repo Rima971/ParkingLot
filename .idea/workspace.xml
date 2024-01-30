@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Removed unnecessary manager class (Owner)">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" afterDir="false" />
+    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses">
       <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AttendantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +49,7 @@
     "JUnit.OwnerTest.ableTopAssignMultipleAttendentsToAParkingLotAndThrowsExceptionOnDuplicatedAttempts.executor": "Run",
     "JUnit.OwnerTest.successfullyCreateOwner.executor": "Run",
     "JUnit.ParkingLotTest,cannot_park_a_vehicle_if_slots_unavailable and 1 more.executor": "Run",
+    "JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked.executor": "Run",
     "JUnit.ParkingLotTest.able_to_park_in_multiple_slots.executor": "Run",
     "JUnit.ParkingLotTest.can_find_where_a_car_is_parked.executor": "Run",
     "JUnit.ParkingLotTest.can_park_a_vehicle_in_an_empty_parking_slot.executor": "Run",
@@ -233,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706611458431</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses">
+      <option name="closed" value="true" />
+      <created>1706611927160</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706611927160</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,7 +249,8 @@
     <MESSAGE value="Changed junit version" />
     <MESSAGE value="Created new custom runtime exceptions" />
     <MESSAGE value="Removed unnecessary manager class (Owner)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary manager class (Owner)" />
+    <MESSAGE value="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

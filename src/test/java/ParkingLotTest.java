@@ -22,7 +22,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void canParkAVhicleInAnEmptyParkingSlot() throws Exception {
+    public void canParkAVehicleInAnEmptyParkingSlot() {
         ParkingLot parkingLot = new ParkingLot(6);
         Vehicle car = new Vehicle(VehicleType.CAR, Color.RED, "RJ111");
 
@@ -75,7 +75,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void cannotUnoparkAVehicleIfIncorrectCredentialsArePassed() {
+    public void cannotUnparkAVehicleIfIncorrectCredentialsArePassed() {
         Vehicle firstCar = new Vehicle(VehicleType.CAR, Color.BLACK, "111");
         Vehicle secondCar = new Vehicle(VehicleType.CAR, Color.BLACK, "112");
         ParkingLot parkingLot = new ParkingLot(3);
