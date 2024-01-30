@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.exceptions.AlreadyOccupiedSlot;
+import org.example.exceptions.AlreadyUnoccupiedSlot;
+
 public class Slot {
     private boolean occupied = false;
     public final int id; // keep id in ParkingLot
@@ -7,25 +10,19 @@ public class Slot {
     public Slot(int id){
         this.id = id;
     }
-    // remove this constructor
-    public Slot(Vehicle vehicle, int id){
-        this.occupied = true;
-        this.id = id;
-        this.vehicle = vehicle;
-    }
 
     public boolean isOccupied(){
         return this.occupied;
     }
 
-    public void occupy(Vehicle vehicle) throws Exception {
-        if (this.occupied || this.vehicle!=null) throw new Exception("This slot is already occupied");
+    public void occupy(Vehicle vehicle) {
+        if (this.occupied || this.vehicle!=null) throw new AlreadyOccupiedSlot();
         this.vehicle = vehicle;
         this.occupied = true;
     }
 
-    public void unoccupy() throws Exception {
-        if (!this.occupied || this.vehicle==null) throw new Exception("This slot is already empty");
+    public void unoccupy() {
+        if (!this.occupied || this.vehicle==null) throw new AlreadyUnoccupiedSlot();
         this.vehicle = null;
         this.occupied = false;
     }
