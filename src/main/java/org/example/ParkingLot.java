@@ -18,15 +18,22 @@ public class ParkingLot {
         }
     }
 
-    private Slot getEmptySlot() {
-        for (Slot slot: slots){
-            if (!slot.isOccupied()) return slot;
+    private Slot getEmptySlot(boolean reverseStrategy) {
+        if (reverseStrategy){
+            for (int i=slots.length-1; i>=0; i--){
+                if (!this.slots[i].isOccupied()) return this.slots[i];
+            }
+        } else{
+            for (Slot slot: this.slots){
+                if (!slot.isOccupied()) return slot;
+            }
         }
+
         return null;
     }
 
     public boolean hasEmptySlot(){
-        if (getEmptySlot() != null) return true;
+        if (getEmptySlot(false) != null) return true;
         return false;
     }
 
@@ -53,7 +60,15 @@ public class ParkingLot {
 
     public int park(Vehicle vehicle) throws AlreadyParkedVehicle, ParkingLotFull {
         if (this.isVehicleParked(vehicle)) throw new AlreadyParkedVehicle();
-        Slot slot = this.getEmptySlot();
+        Slot slot = this.getEmptySlot(false);
+        if (slot==null) throw new ParkingLotFull();
+        slot.occupy(vehicle);
+        return slot.id;
+    }
+
+    public int park(Vehicle vehicle, boolean reverseStrategy) throws AlreadyParkedVehicle, ParkingLotFull {
+        if (this.isVehicleParked(vehicle)) throw new AlreadyParkedVehicle();
+        Slot slot = this.getEmptySlot(reverseStrategy);
         if (slot==null) throw new ParkingLotFull();
         slot.occupy(vehicle);
         return slot.id;

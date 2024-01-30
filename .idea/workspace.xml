@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Worked on IDE warnings">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ReassigningParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +62,7 @@
     "JUnit.ParkingLotTest.cannot_unpark_a_vehicle_if_invalid_credentials_passed.executor": "Run",
     "JUnit.ParkingLotTest.correctly_finds_count_of_all_cars_with_a_given_color.executor": "Run",
     "JUnit.ParkingLotTest.executor": "Run",
+    "JUnit.ParkingLotTest.parksAtTheFarthestSlotOnReversingStrategy.executor": "Run",
     "JUnit.ParkingLotTest.returns_slot_ids_of_only_the_cars_that_were_parked.executor": "Run",
     "JUnit.ParkingLotTest.successfully_create_a_parking_lot_with_initial_set_of_slots.executor": "Run",
     "JUnit.ParkingLotTest.throws_error_on_passing_duplicate_slots.executor": "Run",
@@ -96,7 +96,7 @@
     "onboarding.tips.debug.path": "/Users/madhurima.poddar_ftc/IdeaProjects/parkingLot/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AttendantTest">
+  <component name="RunManager" selected="JUnit.ParkingLotTest.canParkAVehicleInAnEmptyParkingSlot">
     <configuration name="AttendantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
@@ -116,16 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AttendantTest.throwsExceptionWhenAllParkingLotsAreFilled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parkingLot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AttendantTest" />
-      <option name="METHOD_NAME" value="throwsExceptionWhenAllParkingLotsAreFilled" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ParkingLotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
@@ -135,11 +125,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingLotTest.canParkAVehicleInAnEmptyParkingSlot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
-      <option name="METHOD_NAME" value="ReturnsSlotIDsOfOnlyTheCarThatWereParked" />
+      <option name="METHOD_NAME" value="canParkAVehicleInAnEmptyParkingSlot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest.parksAtTheFarthestSlotOnReversingStrategy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parkingLot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkingLotTest" />
+      <option name="METHOD_NAME" value="parksAtTheFarthestSlotOnReversingStrategy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParkingLotTest.canParkAVehicleInAnEmptyParkingSlot" />
+        <item itemvalue="JUnit.ParkingLotTest.parksAtTheFarthestSlotOnReversingStrategy" />
         <item itemvalue="JUnit.AttendantTest" />
         <item itemvalue="JUnit.ParkingLotTest" />
         <item itemvalue="JUnit.AttendantTest.attendantCanParkInSecondLotWhenFirstLotIsFull" />
-        <item itemvalue="JUnit.AttendantTest.throwsExceptionWhenAllParkingLotsAreFilled" />
-        <item itemvalue="JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706613179127</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Worked on IDE warnings">
+      <option name="closed" value="true" />
+      <created>1706613542052</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706613542052</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

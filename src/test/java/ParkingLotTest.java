@@ -31,8 +31,8 @@ public class ParkingLotTest {
         assertDoesNotThrow(()->{
             int id = parkingLot.park(car);
             assertEquals(0, id);
+            assertTrue(parkingLot.findSlot(id).checkRegistrationNumberMatch(car));
         });
-
     }
 
     @Test
@@ -170,6 +170,18 @@ public class ParkingLotTest {
 
         assertEquals(0, parkingLot.getCountOfVehiclesOfColor(Color.BLUE));
         assertEquals(2, parkingLot.getCountOfVehiclesOfColor(Color.RED));
+    }
+
+    @Test
+    public void parksAtTheFarthestSlotOnReversingStrategy(){
+        ParkingLot parkingLot = new ParkingLot(6);
+        Vehicle car = new Vehicle(VehicleType.CAR, Color.RED, "RJ111");
+
+        assertDoesNotThrow(()->{
+            int id = parkingLot.park(car, true);
+            assertEquals(5, id);
+            assertTrue(parkingLot.findSlot(id).checkRegistrationNumberMatch(car));
+        });
     }
 
 }
