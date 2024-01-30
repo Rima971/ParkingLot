@@ -93,7 +93,7 @@
     "onboarding.tips.debug.path": "/Users/madhurima.poddar_ftc/IdeaProjects/parkingLot/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked">
+  <component name="RunManager" selected="JUnit.AttendantTest">
     <configuration name="AttendantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parkingLot" />
       <option name="PACKAGE_NAME" value="" />
@@ -142,9 +142,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AttendantTest" />
         <item itemvalue="JUnit.ParkingLotTest.ReturnsSlotIDsOfOnlyTheCarThatWereParked" />
         <item itemvalue="JUnit.ParkingLotTest" />
-        <item itemvalue="JUnit.AttendantTest" />
         <item itemvalue="JUnit.VehicleTest" />
         <item itemvalue="JUnit.SlotTest" />
       </list>

@@ -60,7 +60,7 @@ public class AttendantTest {
         assertThrows(Exception.class, ()->attendant.park(new Vehicle(VehicleType.CAR, Color.WHITE, "111")));
     }
     @Test
-    public void ableToUnparkVehicleAtTheNearestEmptySlot() throws Exception {
+    public void ableToUnparkVehicle() throws Exception {
         ParkingLot firstLot = new ParkingLot(3);
         ParkingLot secondLot = new ParkingLot(4);
         ParkingLot[] parkingLots = {firstLot,secondLot};
