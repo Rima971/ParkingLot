@@ -6,7 +6,7 @@ import org.example.exceptions.ParkingLotFull;
 import java.util.HashMap;
 
 public class Attendant {
-    private HashMap<Integer, ParkingLot> parkingLots = new HashMap<>();
+    private final HashMap<Integer, ParkingLot> parkingLots = new HashMap<>();
     private int counter = 0;
     public Attendant(ParkingLot[] parkingLots){
         createHashMap(parkingLots);
@@ -29,7 +29,7 @@ public class Attendant {
         throw new ParkingLotFull();
     }
 
-    public void unpark(String token, String registrationNumber) throws Exception {
+    public void unpark(String token, String registrationNumber) {
         String[] split = token.split("-");
         this.parkingLots.get(Integer.parseInt(split[0])).unpark(Integer.parseInt(split[1]), registrationNumber);
     }

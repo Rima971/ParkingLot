@@ -19,7 +19,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void ableToParkVehicleAtTheNearestEmptySlot() throws Exception {
+    public void ableToParkVehicleAtTheNearestEmptySlot() {
         ParkingLot firstLot = new ParkingLot(3);
         ParkingLot secondLot = new ParkingLot(4);
         ParkingLot[] parkingLots = {firstLot,secondLot};
@@ -39,7 +39,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void throwsExceptionWhenAllParkingLotsAreFilled() throws Exception {
+    public void throwsExceptionWhenAllParkingLotsAreFilled() {
         ParkingLot firstLot = new ParkingLot(1);
         ParkingLot secondLot = new ParkingLot(1);
         ParkingLot[] parkingLots = {firstLot,secondLot};
@@ -52,7 +52,7 @@ public class AttendantTest {
     }
 
     @Test
-    public void throwsExceptionOnAttemptingToParkSameVehicleInDifferentParkingLots() throws Exception {
+    public void throwsExceptionOnAttemptingToParkSameVehicleInDifferentParkingLots() {
         ParkingLot firstLot = new ParkingLot(1);
         ParkingLot secondLot = new ParkingLot(1);
         ParkingLot[] parkingLots = {firstLot,secondLot};
@@ -63,7 +63,7 @@ public class AttendantTest {
         assertThrows(Exception.class, ()->attendant.park(new Vehicle(VehicleType.CAR, Color.WHITE, "111")));
     }
     @Test
-    public void ableToUnparkVehicle() throws Exception {
+    public void ableToUnparkVehicle() throws ParkingLotFull {
         ParkingLot firstLot = new ParkingLot(3);
         ParkingLot secondLot = new ParkingLot(4);
         ParkingLot[] parkingLots = {firstLot,secondLot};

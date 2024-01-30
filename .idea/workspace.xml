@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="fixed types">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e69247fc-fdb7-4a9c-9669-eaf904dcb76f" name="Changes" comment="Refactored Attendent to use custom exceptions">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Attendant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Slot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VehicleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/VehicleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ParkingLotFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/ParkingLotFull.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AttendantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AttendantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SlotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SlotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +257,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706612107082</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="reorganized the codebase better">
+      <option name="closed" value="true" />
+      <created>1706613031455</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706613031455</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactored Attendent to use custom exceptions">
+      <option name="closed" value="true" />
+      <created>1706613072529</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706613072529</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -282,7 +287,9 @@
     <MESSAGE value="Refactored code, used custom exceptions, refactored and realigned tests, checked for custom exceptions, removed unecessary constructor from ParkingLot and its uses" />
     <MESSAGE value="removed unnecessary code and fixed types" />
     <MESSAGE value="fixed types" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed types" />
+    <MESSAGE value="reorganized the codebase better" />
+    <MESSAGE value="Refactored Attendent to use custom exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Attendent to use custom exceptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -291,6 +298,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/ParkingLotTest.java</url>
           <line>136</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/AttendantTest.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ParkingLotTest.java</url>
